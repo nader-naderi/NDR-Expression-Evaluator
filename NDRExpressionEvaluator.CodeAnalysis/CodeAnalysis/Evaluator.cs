@@ -37,8 +37,6 @@ namespace NDRExpressionEvaluator.CodeAnalysis
                     return left * right;
                 else
                     throw new Exception($"Unexpected binary operator {b.OperatorToken.Kind}");
-
-
             }
 
             if (node is ParanthesizedExpressionSyntax p)

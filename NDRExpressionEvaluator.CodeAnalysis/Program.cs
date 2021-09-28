@@ -12,7 +12,7 @@ namespace NDRExpressionEvaluator
             bool showTree = false;
             while (true)
             {
-                Console.Write(">");
+                Console.Write("> ");
 
                 var line = Console.ReadLine();
 
@@ -49,7 +49,7 @@ namespace NDRExpressionEvaluator
                 {
                     var e = new Evaluator(syntaxTree.Root);
                     var result = e.Evaluate();
-                    Console.WriteLine(result);
+                    Console.WriteLine("Result : " + result);
                 }
                 else
                 {
