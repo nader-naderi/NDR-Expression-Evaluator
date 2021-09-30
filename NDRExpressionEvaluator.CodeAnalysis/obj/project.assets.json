@@ -8,27 +8,20 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Nader Naderi\\.nuget\\packages\\": {},
-    "C:\\ProgramData\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Nader\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nader Naderi\\vsCodeProjects\\NDR-Expression-Evaluator\\NDR-Expression-Evaluator\\NDRExpressionEvaluator.CodeAnalysis\\NDRExpressionEvaluator.CodeAnalysis.csproj",
+      "projectUniqueName": "C:\\Users\\Nader\\Documents\\reposes\\CSharpDotNet\\NDR-Expression-Evaluator\\NDRExpressionEvaluator.CodeAnalysis\\NDRExpressionEvaluator.CodeAnalysis.csproj",
       "projectName": "NDRExpressionEvaluator.CodeAnalysis",
-      "projectPath": "C:\\Users\\Nader Naderi\\vsCodeProjects\\NDR-Expression-Evaluator\\NDR-Expression-Evaluator\\NDRExpressionEvaluator.CodeAnalysis\\NDRExpressionEvaluator.CodeAnalysis.csproj",
-      "packagesPath": "C:\\Users\\Nader Naderi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nader Naderi\\vsCodeProjects\\NDR-Expression-Evaluator\\NDR-Expression-Evaluator\\NDRExpressionEvaluator.CodeAnalysis\\obj\\",
+      "projectPath": "C:\\Users\\Nader\\Documents\\reposes\\CSharpDotNet\\NDR-Expression-Evaluator\\NDRExpressionEvaluator.CodeAnalysis\\NDRExpressionEvaluator.CodeAnalysis.csproj",
+      "packagesPath": "C:\\Users\\Nader\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Nader\\Documents\\reposes\\CSharpDotNet\\NDR-Expression-Evaluator\\NDRExpressionEvaluator.CodeAnalysis\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\ProgramData\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Nader Naderi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Nader\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
