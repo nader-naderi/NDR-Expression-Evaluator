@@ -5,9 +5,9 @@ using NDRExpressionEvaluator.CodeAnalysis;
 
 namespace NDRExpressionEvaluator
 {
-    public class program
+    internal static class program
     {
-        static void Main()
+         private static void Main()
         {
             bool showTree = false;
             while (true)
@@ -37,14 +37,12 @@ namespace NDRExpressionEvaluator
 
                 if (showTree)
                 {
-                    var color = Console.ForegroundColor;
-
                     Console.ForegroundColor = ConsoleColor.DarkGray;
 
                     PrettyPrint(syntaxTree.Root);
-
-                    Console.ForegroundColor = color;
+                    
                 }
+
                 if (!syntaxTree.Diagnostics.Any())
                 {
                     var e = new Evaluator(syntaxTree.Root);
@@ -53,15 +51,13 @@ namespace NDRExpressionEvaluator
                 }
                 else
                 {
-                    var color = Console.ForegroundColor;
                     Console.ForegroundColor = ConsoleColor.Red;
 
                     foreach (var diagnostic in syntaxTree.Diagnostics)
                     {
                         Console.WriteLine(diagnostic);
                     }
-
-                    Console.ForegroundColor = color;
+                    Console.ResetColor();
                 }
             }
         }
@@ -88,7 +84,7 @@ namespace NDRExpressionEvaluator
 
             Console.WriteLine();
 
-            indent += isLast ? "     " : "│    ";
+            indent += isLast ? "   " : "│    ";
 
             var lastChild = node.GetChildern().LastOrDefault();
 
