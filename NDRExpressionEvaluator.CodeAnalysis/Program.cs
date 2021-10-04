@@ -7,6 +7,7 @@ namespace NDRExpressionEvaluator
 {
     public class program
     {
+        // Entry point.
         static void Main()
         {
             bool showTree = false;
