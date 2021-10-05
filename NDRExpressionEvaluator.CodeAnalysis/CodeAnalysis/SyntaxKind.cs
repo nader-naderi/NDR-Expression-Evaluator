@@ -1,7 +1,10 @@
 namespace NDRExpressionEvaluator.CodeAnalysis
 {
-    enum SyntaxKind
+    public enum SyntaxKind
     {
+        // Tokens
+        BadToken,
+        EndOfFileToken,
         NumberToken,
         WhitespaceToken,
         PlusToken,
@@ -10,8 +13,8 @@ namespace NDRExpressionEvaluator.CodeAnalysis
         SlashToken,
         OpenParanthesisToken,
         CloseParanthesisToken,
-        BadToken,
-        EndOfFileToken,
+
+        // Expressions
         NumberExpression,
         BinaryExpression,
         ParanthesizedExpression

@@ -1,6 +1,6 @@
 namespace NDRExpressionEvaluator.CodeAnalysis
 {
-    class ParanthesizedExpressionSyntax : ExpressionSyntax
+    public class ParanthesizedExpressionSyntax : ExpressionSyntax
     {
         public ParanthesizedExpressionSyntax(SyntaxToken openParanthesisToken, ExpressionSyntax expression, SyntaxToken closeParanthesisToken)
         {

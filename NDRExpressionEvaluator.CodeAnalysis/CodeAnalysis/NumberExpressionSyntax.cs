@@ -1,18 +1,18 @@
 namespace NDRExpressionEvaluator.CodeAnalysis
 {
-    sealed class NumberExpressionSyntax : ExpressionSyntax
+    public sealed class LiteralExpressionSyntax : ExpressionSyntax
     {
-        public SyntaxToken NumberToken;
+        public SyntaxToken LiteralToken;
 
         public override SyntaxKind Kind => SyntaxKind.NumberExpression;
-        public NumberExpressionSyntax(SyntaxToken numberToken)
+        public LiteralExpressionSyntax(SyntaxToken literalToken)
         {
-            this.NumberToken = numberToken;
+            this.LiteralToken = literalToken;
         }
 
         public override IEnumerable<SyntaxNode> GetChildern()
         {
-            yield return NumberToken;
+            yield return LiteralToken;
         }
     }
 }

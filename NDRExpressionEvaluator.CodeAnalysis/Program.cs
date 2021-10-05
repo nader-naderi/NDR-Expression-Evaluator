@@ -5,10 +5,10 @@ using NDRExpressionEvaluator.CodeAnalysis;
 
 namespace NDRExpressionEvaluator
 {
-    public class program
+    internal static class program
     {
         // Entry point.
-        static void Main()
+        private static void Main()
         {
             bool showTree = false;
             while (true)

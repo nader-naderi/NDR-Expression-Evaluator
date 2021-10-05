@@ -1,6 +1,6 @@
 namespace NDRExpressionEvaluator.CodeAnalysis
 {
-    class Evaluator
+    public sealed class Evaluator
     {
         public Evaluator(ExpressionSyntax root)
         {
@@ -19,8 +19,8 @@ namespace NDRExpressionEvaluator.CodeAnalysis
             // Binary expression.
             // Number expression.
 
-            if (node is NumberExpressionSyntax n)
-                return (int)n.NumberToken.Value;
+            if (node is LiteralExpressionSyntax n)
+                return (int)n.LiteralToken.Value;
 
             if (node is BinaryExpressionSyntax b)
             {
