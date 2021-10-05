@@ -16,7 +16,8 @@ namespace NDRExpressionEvaluator.CodeAnalysis
 
         // Expressions
         LiteralExpression,
+        UnaryExpressionSyntax,
         BinaryExpression,
-        ParanthesizedExpression
+        ParanthesizedExpression,
     }
 }
