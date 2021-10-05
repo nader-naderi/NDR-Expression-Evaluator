@@ -71,7 +71,7 @@ namespace NDRExpressionEvaluator.CodeAnalysis
             var left = ParsePrimaryExpression();
             while (true)
             {
-                var precedence = GetBinaryOperatorPrecedence(Current.Kind);
+                var precedence = Current.Kind.GetBinaryOperatorPrecedence();
                 if (precedence == 0 || precedence <= parentPrecedence) // parse it later.
                     break;
 
@@ -83,23 +83,6 @@ namespace NDRExpressionEvaluator.CodeAnalysis
             return left;
         }
 
-        // Get Precedence.
-        private static int GetBinaryOperatorPrecedence(SyntaxKind kind)
-        {
-            switch (kind)
-            {
-
-                case SyntaxKind.StarToken:
-                case SyntaxKind.SlashToken:
-                    return 2;
-                case SyntaxKind.PlusToken:
-                case SyntaxKind.MinusToken:
-                    return 1;
-
-                default:
-                    return 0;
-            }
-        }
 
 
 
