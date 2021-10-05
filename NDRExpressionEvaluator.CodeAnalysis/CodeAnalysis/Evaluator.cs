@@ -1,3 +1,4 @@
+using NDRExpressionEvaluator.CodeAnalysis.Syntax;
 namespace NDRExpressionEvaluator.CodeAnalysis
 {
     public sealed class Evaluator

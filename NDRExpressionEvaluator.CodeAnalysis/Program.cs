@@ -2,6 +2,7 @@
 using System.Linq;
 
 using NDRExpressionEvaluator.CodeAnalysis;
+using NDRExpressionEvaluator.CodeAnalysis.Syntax;
 
 namespace NDRExpressionEvaluator
 {

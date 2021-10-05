@@ -1,4 +1,4 @@
-namespace NDRExpressionEvaluator.CodeAnalysis
+namespace NDRExpressionEvaluator.CodeAnalysis.Syntax
 {
     public enum SyntaxKind
     {
