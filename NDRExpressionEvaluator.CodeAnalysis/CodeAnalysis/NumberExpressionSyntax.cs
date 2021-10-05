@@ -4,7 +4,7 @@ namespace NDRExpressionEvaluator.CodeAnalysis
     {
         public SyntaxToken LiteralToken;
 
-        public override SyntaxKind Kind => SyntaxKind.NumberExpression;
+        public override SyntaxKind Kind => SyntaxKind.LiteralExpression;
         public LiteralExpressionSyntax(SyntaxToken literalToken)
         {
             this.LiteralToken = literalToken;

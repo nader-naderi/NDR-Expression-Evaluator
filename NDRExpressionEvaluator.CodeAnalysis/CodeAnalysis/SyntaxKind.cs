@@ -15,7 +15,7 @@ namespace NDRExpressionEvaluator.CodeAnalysis
         CloseParanthesisToken,
 
         // Expressions
-        NumberExpression,
+        LiteralExpression,
         BinaryExpression,
         ParanthesizedExpression
     }
