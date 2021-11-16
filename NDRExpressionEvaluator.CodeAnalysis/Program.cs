@@ -2,7 +2,6 @@
 using System.Linq;
 
 using NDRExpressionEvaluator.CodeAnalysis;
-using NDRExpressionEvaluator.CodeAnalysis.Binding;
 using NDRExpressionEvaluator.CodeAnalysis.Syntax;
 
 namespace NDRExpressionEvaluator
@@ -37,11 +36,6 @@ namespace NDRExpressionEvaluator
                 }
 
                 SyntaxTree syntaxTree = SyntaxTree.Parse(line);
-                var binder = new Binder();
-                var BoundExpression = binder.BindExpression(syntaxTree.Root);
-
-                var diagnostics = syntaxTree.Diagnostics.Concat(binder.Diagnostics).ToArray();
-
 
                 if (showTree)
                 {
@@ -53,10 +47,9 @@ namespace NDRExpressionEvaluator
 
                     Console.ForegroundColor = color;
                 }
-
-                if (!diagnostics.Any())
+                if (!syntaxTree.Diagnostics.Any())
                 {
-                    var e = new Evaluator(BoundExpression);
+                    var e = new Evaluator(syntaxTree.Root);
                     var result = e.Evaluate();
                     Console.WriteLine("Result : " + result);
                 }
