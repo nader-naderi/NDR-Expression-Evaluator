@@ -1,30 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
-      "Arta/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/Arta.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Arta.dll": {}
-        }
-      }
-    }
+    "net6.0": {}
   },
-  "libraries": {
-    "Arta/1.0.0": {
-      "type": "project",
-      "path": "../Arta/Arta.csproj",
-      "msbuildProject": "../Arta/Arta.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net6.0": [
-      "Arta >= 1.0.0"
-    ]
+    "net6.0": []
   },
   "packageFolders": {
     "C:\\Users\\Nader Naderi\\.nuget\\packages\\": {},
@@ -34,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nader Naderi\\vsCodeProjects\\NDR-Expression-Evaluator\\NDR-Expression-Evaluator\\NDRExpressionEvaluator.CodeAnalysis\\NDRExpressionEvaluator.CodeAnalysis.csproj",
-      "projectName": "NDRExpressionEvaluator.CodeAnalysis",
-      "projectPath": "C:\\Users\\Nader Naderi\\vsCodeProjects\\NDR-Expression-Evaluator\\NDR-Expression-Evaluator\\NDRExpressionEvaluator.CodeAnalysis\\NDRExpressionEvaluator.CodeAnalysis.csproj",
+      "projectUniqueName": "C:\\Users\\Nader Naderi\\vsCodeProjects\\NDR-Expression-Evaluator\\NDR-Expression-Evaluator\\Arta\\Arta.csproj",
+      "projectName": "Arta",
+      "projectPath": "C:\\Users\\Nader Naderi\\vsCodeProjects\\NDR-Expression-Evaluator\\NDR-Expression-Evaluator\\Arta\\Arta.csproj",
       "packagesPath": "C:\\Users\\Nader Naderi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nader Naderi\\vsCodeProjects\\NDR-Expression-Evaluator\\NDR-Expression-Evaluator\\NDRExpressionEvaluator.CodeAnalysis\\obj\\",
+      "outputPath": "C:\\Users\\Nader Naderi\\vsCodeProjects\\NDR-Expression-Evaluator\\NDR-Expression-Evaluator\\Arta\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\ProgramData\\Xamarin\\NuGet\\",
@@ -59,11 +40,7 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {
-            "C:\\Users\\Nader Naderi\\vsCodeProjects\\NDR-Expression-Evaluator\\NDR-Expression-Evaluator\\Arta\\Arta.csproj": {
-              "projectPath": "C:\\Users\\Nader Naderi\\vsCodeProjects\\NDR-Expression-Evaluator\\NDR-Expression-Evaluator\\Arta\\Arta.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

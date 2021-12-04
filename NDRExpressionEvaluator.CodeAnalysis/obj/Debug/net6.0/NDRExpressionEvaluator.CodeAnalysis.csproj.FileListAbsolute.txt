@@ -30,3 +30,5 @@ C:\Users\Nader Naderi\vsCodeProjects\NDR-Expression-Evaluator\NDR-Expression-Eva
 C:\Users\Nader Naderi\vsCodeProjects\NDR-Expression-Evaluator\NDR-Expression-Evaluator\NDRExpressionEvaluator.CodeAnalysis\obj\Debug\net6.0\ref\NDRExpressionEvaluator.CodeAnalysis.dll
 C:\Users\Nader Naderi\vsCodeProjects\NDR-Expression-Evaluator\NDR-Expression-Evaluator\NDRExpressionEvaluator.CodeAnalysis\obj\Debug\net6.0\NDRExpressionEvaluator.CodeAnalysis.pdb
 C:\Users\Nader Naderi\vsCodeProjects\NDR-Expression-Evaluator\NDR-Expression-Evaluator\NDRExpressionEvaluator.CodeAnalysis\obj\Debug\net6.0\NDRExpressionEvaluator.CodeAnalysis.genruntimeconfig.cache
+C:\Users\Nader Naderi\vsCodeProjects\NDR-Expression-Evaluator\NDR-Expression-Evaluator\NDRExpressionEvaluator.CodeAnalysis\bin\Debug\net6.0\Arta.dll
+C:\Users\Nader Naderi\vsCodeProjects\NDR-Expression-Evaluator\NDR-Expression-Evaluator\NDRExpressionEvaluator.CodeAnalysis\bin\Debug\net6.0\Arta.pdb

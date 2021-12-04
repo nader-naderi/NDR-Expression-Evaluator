@@ -6,14 +6,6 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "NDRExpressionEvaluator.CodeAnalysis/1.0.0": {
-        "dependencies": {
-          "Arta": "1.0.0"
-        },
-        "runtime": {
-          "NDRExpressionEvaluator.CodeAnalysis.dll": {}
-        }
-      },
       "Arta/1.0.0": {
         "runtime": {
           "Arta.dll": {}
@@ -22,11 +14,6 @@
     }
   },
   "libraries": {
-    "NDRExpressionEvaluator.CodeAnalysis/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "Arta/1.0.0": {
       "type": "project",
       "serviceable": false,

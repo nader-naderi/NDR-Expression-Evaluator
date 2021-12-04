@@ -1,0 +1,13 @@
+C:\Users\Nader Naderi\vsCodeProjects\NDR-Expression-Evaluator\NDR-Expression-Evaluator\Arta\bin\Debug\net6.0\Arta.deps.json
+C:\Users\Nader Naderi\vsCodeProjects\NDR-Expression-Evaluator\NDR-Expression-Evaluator\Arta\bin\Debug\net6.0\Arta.dll
+C:\Users\Nader Naderi\vsCodeProjects\NDR-Expression-Evaluator\NDR-Expression-Evaluator\Arta\bin\Debug\net6.0\ref\Arta.dll
+C:\Users\Nader Naderi\vsCodeProjects\NDR-Expression-Evaluator\NDR-Expression-Evaluator\Arta\bin\Debug\net6.0\Arta.pdb
+C:\Users\Nader Naderi\vsCodeProjects\NDR-Expression-Evaluator\NDR-Expression-Evaluator\Arta\obj\Debug\net6.0\Arta.GlobalUsings.g.cs
+C:\Users\Nader Naderi\vsCodeProjects\NDR-Expression-Evaluator\NDR-Expression-Evaluator\Arta\obj\Debug\net6.0\Arta.csproj.AssemblyReference.cache
+C:\Users\Nader Naderi\vsCodeProjects\NDR-Expression-Evaluator\NDR-Expression-Evaluator\Arta\obj\Debug\net6.0\Arta.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nader Naderi\vsCodeProjects\NDR-Expression-Evaluator\NDR-Expression-Evaluator\Arta\obj\Debug\net6.0\Arta.AssemblyInfoInputs.cache
+C:\Users\Nader Naderi\vsCodeProjects\NDR-Expression-Evaluator\NDR-Expression-Evaluator\Arta\obj\Debug\net6.0\Arta.AssemblyInfo.cs
+C:\Users\Nader Naderi\vsCodeProjects\NDR-Expression-Evaluator\NDR-Expression-Evaluator\Arta\obj\Debug\net6.0\Arta.csproj.CoreCompileInputs.cache
+C:\Users\Nader Naderi\vsCodeProjects\NDR-Expression-Evaluator\NDR-Expression-Evaluator\Arta\obj\Debug\net6.0\Arta.dll
+C:\Users\Nader Naderi\vsCodeProjects\NDR-Expression-Evaluator\NDR-Expression-Evaluator\Arta\obj\Debug\net6.0\ref\Arta.dll
+C:\Users\Nader Naderi\vsCodeProjects\NDR-Expression-Evaluator\NDR-Expression-Evaluator\Arta\obj\Debug\net6.0\Arta.pdb

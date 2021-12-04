@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 
-using NDRExpressionEvaluator.CodeAnalysis;
-using NDRExpressionEvaluator.CodeAnalysis.Syntax;
-using NDRExpressionEvaluator.CodeAnalysis.Binder;
+using Arta.CodeAnalysis;
+using Arta.CodeAnalysis.Syntax;
+using Arta.CodeAnalysis.Binding;
 
 namespace NDRExpressionEvaluator
 {
@@ -22,8 +22,6 @@ namespace NDRExpressionEvaluator
                 if (string.IsNullOrWhiteSpace(line))
                     return;
 
-                var parser = new Parser(line);
-
                 if (line == "#showTree")
                 {
                     showTree = !showTree;
@@ -37,10 +35,10 @@ namespace NDRExpressionEvaluator
                 }
 
                 SyntaxTree syntaxTree = SyntaxTree.Parse(line);
-                var binder = new Binder();
-                var BoundExpression = binder.BindExpression(syntaxTree.Root);
+                var compilation = new Compilation(syntaxTree);
+                var result = compilation.Evaluate();
 
-                var diagnostics = syntaxTree.Diagnostics.Concat(binder.Diagnostics).ToArray();
+                var diagnostics = result.Diagnostics;
 
                 if (showTree)
                 {
@@ -50,26 +48,42 @@ namespace NDRExpressionEvaluator
 
                     PrettyPrint(syntaxTree.Root);
 
-                    Console.ForegroundColor = color;
+                    Console.ResetColor();
                 }
 
                 if (!diagnostics.Any())
                 {
-                    var e = new Evaluator(BoundExpression);
-                    var result = e.Evaluate();
-                    Console.WriteLine("Result : " + result);
+                    Console.WriteLine("Result : " + result.Value);
                 }
                 else
                 {
-                    var color = Console.ForegroundColor;
                     Console.ForegroundColor = ConsoleColor.Red;
 
                     foreach (var diagnostic in diagnostics)
                     {
+                        Console.WriteLine();
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine(diagnostic);
-                    }
+                        Console.ResetColor();
 
-                    Console.ForegroundColor = color;
+
+                        var prefix = line.Substring(0, diagnostic.Span.Start);
+
+                        var error = line.Substring(diagnostic.Span.Start, diagnostic.Span.Length);
+
+                        var suffix = line.Substring(diagnostic.Span.End);
+
+                        Console.Write("    ");
+                        Console.Write(prefix);
+
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
+                        Console.Write(error);
+                        Console.ResetColor();
+                        Console.Write(suffix);
+                        Console.WriteLine();
+                    }
+                    Console.WriteLine();
+
                 }
             }
         }
