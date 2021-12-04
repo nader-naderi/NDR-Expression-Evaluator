@@ -116,7 +116,7 @@ namespace NDRExpressionEvaluator.CodeAnalysis.Syntax
                 case SyntaxKind.TrueKeyword:
                     {
                         var KeywordToken = NextToken();
-                        var value = Current.Kind == SyntaxKind.TrueKeyword;
+                        var value = KeywordToken.Kind == SyntaxKind.TrueKeyword;
                         return new LiteralExpressionSyntax(KeywordToken, value);
                     }
                 default:

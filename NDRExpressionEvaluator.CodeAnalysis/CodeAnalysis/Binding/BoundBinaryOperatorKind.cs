@@ -5,6 +5,8 @@ namespace NDRExpressionEvaluator.CodeAnalysis.Binder
         Addition,
         Substraction,
         Multiplication,
-        Division
+        Division,
+        LogicalOr,
+        LogicalAnd
     }
 }

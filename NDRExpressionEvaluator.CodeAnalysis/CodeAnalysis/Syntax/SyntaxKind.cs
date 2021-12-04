@@ -11,13 +11,16 @@ namespace NDRExpressionEvaluator.CodeAnalysis.Syntax
         MinusToken,
         StarToken,
         SlashToken,
+        BangToken,
+        AmpersandAmpersandToken,
+        PipePipeToken,
         OpenParanthesisToken,
         CloseParanthesisToken,
+        IdentifierToken,
 
         // Keywords
         FalseKeyword,
         TrueKeyword,
-        IdentifierToken,
 
         // Expressions
         LiteralExpression,
