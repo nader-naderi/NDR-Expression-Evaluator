@@ -7,6 +7,8 @@ namespace NDRExpressionEvaluator.CodeAnalysis.Binder
         Multiplication,
         Division,
         LogicalOr,
-        LogicalAnd
+        LogicalAnd,
+        Equals,
+        NotEquals
     }
 }

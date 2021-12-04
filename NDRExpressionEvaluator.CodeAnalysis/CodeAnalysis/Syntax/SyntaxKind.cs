@@ -14,6 +14,8 @@ namespace NDRExpressionEvaluator.CodeAnalysis.Syntax
         BangToken,
         AmpersandAmpersandToken,
         PipePipeToken,
+        EqualsEqualsToken,
+        BangEqualsToken,
         OpenParanthesisToken,
         CloseParanthesisToken,
         IdentifierToken,
