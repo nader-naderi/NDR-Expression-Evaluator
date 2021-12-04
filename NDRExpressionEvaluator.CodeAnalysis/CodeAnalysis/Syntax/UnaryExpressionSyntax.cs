@@ -2,7 +2,7 @@ namespace NDRExpressionEvaluator.CodeAnalysis.Syntax
 {
     public sealed class UnaryExpressionSyntax : ExpressionSyntax
     {
-        public override SyntaxKind Kind => SyntaxKind.UnaryExpressionSyntax;
+        public override SyntaxKind Kind => SyntaxKind.UnaryExpression;
 
         public SyntaxToken OperatorToken { get; }
         public ExpressionSyntax Operand { get; }
