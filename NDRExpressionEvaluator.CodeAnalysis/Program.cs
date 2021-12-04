@@ -96,7 +96,7 @@ namespace NDRExpressionEvaluator
 
             Console.WriteLine();
 
-            indent += isLast ? "     " : "│    ";
+            indent += isLast ? "     " : "│   ";
 
             var lastChild = node.GetChildern().LastOrDefault();
 

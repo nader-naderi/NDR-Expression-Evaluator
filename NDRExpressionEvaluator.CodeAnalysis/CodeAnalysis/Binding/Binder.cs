@@ -19,6 +19,8 @@ namespace NDRExpressionEvaluator.CodeAnalysis.Binder
                     return BindUnaryExpression((UnaryExpressionSyntax)syntax);
                 case SyntaxKind.BinaryExpression:
                     return BindBinaryExpression((BinaryExpressionSyntax)syntax);
+                case SyntaxKind.ParanthesizedExpression:
+                    return BindExpression(((ParanthesizedExpressionSyntax)syntax).Expression);
                 default:
                     throw new Exception($"Unexpected syntax {syntax.Kind}");
             }
