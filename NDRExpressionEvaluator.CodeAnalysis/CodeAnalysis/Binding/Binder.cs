@@ -27,7 +27,7 @@ namespace NDRExpressionEvaluator.CodeAnalysis.Binder
         private BoundExpression BindLiteralExpression(LiteralExpressionSyntax syntax)
         {
             // if its null then it's zero.
-            var value = syntax.LiteralToken.Value as int? ?? 0;
+            var value = syntax.Value ?? 0;
             return new BoundLiteralExpression(value);
         }
 

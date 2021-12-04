@@ -14,6 +14,11 @@ namespace NDRExpressionEvaluator.CodeAnalysis.Syntax
         OpenParanthesisToken,
         CloseParanthesisToken,
 
+        // Keywords
+        FalseKeyword,
+        TrueKeyword,
+        IdentifierToken,
+
         // Expressions
         LiteralExpression,
         UnaryExpression,

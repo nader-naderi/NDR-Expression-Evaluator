@@ -102,15 +102,31 @@ namespace NDRExpressionEvaluator.CodeAnalysis.Syntax
 
         private ExpressionSyntax ParsePrimaryExpression()
         {
-            if (Current.Kind == SyntaxKind.OpenParanthesisToken)
+            switch (Current.Kind)
             {
-                var left = NextToken();
-                var expression = ParseExpression();
-                var right = MatchToken(SyntaxKind.CloseParanthesisToken);
-                return new ParanthesizedExpressionSyntax(left, expression, right);
+                case SyntaxKind.OpenParanthesisToken:
+                    {
+                        var left = NextToken();
+                        var expression = ParseExpression();
+                        var right = MatchToken(SyntaxKind.CloseParanthesisToken);
+                        return new ParanthesizedExpressionSyntax(left, expression, right);
+                    }
+
+                case SyntaxKind.FalseKeyword:
+                case SyntaxKind.TrueKeyword:
+                    {
+                        var KeywordToken = NextToken();
+                        var value = Current.Kind == SyntaxKind.TrueKeyword;
+                        return new LiteralExpressionSyntax(KeywordToken, value);
+                    }
+                default:
+                    {
+                        var numberToken = MatchToken(SyntaxKind.NumberToken);
+                        return new LiteralExpressionSyntax(numberToken);
+                    }
             }
-            var numberToken = MatchToken(SyntaxKind.NumberToken);
-            return new LiteralExpressionSyntax(numberToken);
+
+
         }
     }
 }

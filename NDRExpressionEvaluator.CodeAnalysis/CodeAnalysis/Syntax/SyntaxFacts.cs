@@ -33,5 +33,17 @@ namespace NDRExpressionEvaluator.CodeAnalysis.Syntax
             }
         }
 
+        public static SyntaxKind GetKeywordKind(string text)
+        {
+            switch (text)
+            {
+                case "true":
+                    return SyntaxKind.TrueKeyword;
+                case "false":
+                    return SyntaxKind.FalseKeyword;
+                default:
+                    return SyntaxKind.IdentifierToken;
+            }
+        }
     }
 }
