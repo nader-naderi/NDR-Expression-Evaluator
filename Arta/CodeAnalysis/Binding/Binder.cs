@@ -13,24 +13,41 @@ namespace Arta.CodeAnalysis.Binding
         {
             switch (syntax.Kind)
             {
+                case SyntaxKind.ParanthesizedExpression:
+                    return BindParenthesizedExpression(((ParanthesizedExpressionSyntax)syntax));
                 case SyntaxKind.LiteralExpression:
                     return BindLiteralExpression((LiteralExpressionSyntax)syntax);
+                case SyntaxKind.NameExpression:
+                    return BindNameExpression(((NameExpressionSyntax)syntax));
+                case SyntaxKind.AssignmentExpression:
+                    return BindAssignmentExpression(((AssignmentExpressionSyntax)syntax));
                 case SyntaxKind.UnaryExpression:
                     return BindUnaryExpression((UnaryExpressionSyntax)syntax);
                 case SyntaxKind.BinaryExpression:
                     return BindBinaryExpression((BinaryExpressionSyntax)syntax);
-                case SyntaxKind.ParanthesizedExpression:
-                    return BindExpression(((ParanthesizedExpressionSyntax)syntax).Expression);
+
                 default:
                     throw new Exception($"Unexpected syntax {syntax.Kind}");
             }
         }
+
+
 
         private BoundExpression BindLiteralExpression(LiteralExpressionSyntax syntax)
         {
             // if its null then it's zero.
             var value = syntax.Value ?? 0;
             return new BoundLiteralExpression(value);
+        }
+
+        private BoundExpression BindAssignmentExpression(AssignmentExpressionSyntax syntax)
+        {
+            throw new NotImplementedException();
+        }
+
+        private BoundExpression BindNameExpression(NameExpressionSyntax syntax)
+        {
+            throw new NotImplementedException();
         }
 
         private BoundExpression BindUnaryExpression(UnaryExpressionSyntax syntax)
@@ -63,6 +80,11 @@ namespace Arta.CodeAnalysis.Binding
 
 
             return new BoundBinaryExpression(boundLeft, boundOperator, boundRight);
+        }
+
+        private BoundExpression BindParenthesizedExpression(ParanthesizedExpressionSyntax syntax)
+        {
+            return BindExpression(syntax.Expression);
         }
     }
 }

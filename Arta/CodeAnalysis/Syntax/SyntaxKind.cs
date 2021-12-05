@@ -12,6 +12,7 @@ namespace Arta.CodeAnalysis.Syntax
         StarToken,
         SlashToken,
         BangToken,
+        EqualsToken,
         AmpersandAmpersandToken,
         PipePipeToken,
         EqualsEqualsToken,
@@ -26,8 +27,10 @@ namespace Arta.CodeAnalysis.Syntax
 
         // Expressions
         LiteralExpression,
+        NameExpression,
         UnaryExpression,
         BinaryExpression,
         ParanthesizedExpression,
+        AssignmentExpression,
     }
 }

@@ -66,14 +66,49 @@ namespace Arta.CodeAnalysis.Syntax
             return new SyntaxTree(_diagnostics, expression, endOfFileToken);
         }
 
-        private ExpressionSyntax ParseExpression(int parentPrecedence = 0)
+        private ExpressionSyntax ParseExpression()
+        {
+            return ParseAssignmentExpression();
+        }
+
+        private ExpressionSyntax ParseAssignmentExpression()
+        {
+            // a + b + 5 
+            // 
+            //          +
+            //         / \
+            //        +   5
+            //       / \
+            //      a   b
+            // 
+            // a = b = 5
+            // 
+            //      *
+            //     / \
+            //    a   =
+            //       / \
+            //      b   5
+            // 
+
+            if (Peek(0).Kind == SyntaxKind.IdentifierToken && Peek(1).Kind == SyntaxKind.EqualsEqualsToken)
+            {
+                var identifierToken = NextToken();
+                var operatorToken = NextToken();
+                var right = ParseAssignmentExpression();
+                return new AssignmentExpressionSyntax(identifierToken, operatorToken, right);
+            }
+
+            return ParseBinaryExpression();
+        }
+
+        private ExpressionSyntax ParseBinaryExpression(int parentPrecedence = 0)
         {
             ExpressionSyntax left;
             var unaryOperatorPrecedence = Current.Kind.GetBinaryOperatorPrecedence();
             if (unaryOperatorPrecedence != 0 && unaryOperatorPrecedence >= parentPrecedence)
             {
                 var OperatorToken = NextToken();
-                var operand = ParseExpression(unaryOperatorPrecedence);
+                var operand = ParseBinaryExpression(unaryOperatorPrecedence);
                 left = new UnaryExpressionSyntax(OperatorToken, operand);
 
             }
@@ -90,15 +125,12 @@ namespace Arta.CodeAnalysis.Syntax
                     break;
 
                 var operatorToken = NextToken();
-                var right = ParseExpression(precedence);
+                var right = ParseBinaryExpression(precedence);
                 left = new BinaryExpressionSyntax(left, operatorToken, right);
             }
 
             return left;
         }
-
-
-
 
         private ExpressionSyntax ParsePrimaryExpression()
         {
@@ -119,6 +151,13 @@ namespace Arta.CodeAnalysis.Syntax
                         var value = KeywordToken.Kind == SyntaxKind.TrueKeyword;
                         return new LiteralExpressionSyntax(KeywordToken, value);
                     }
+
+                case SyntaxKind.IdentifierToken:
+                    {
+                        var identifierToken = NextToken();
+                        return new NameExpressionSyntax(identifierToken);
+                    }
+
                 default:
                     {
                         var numberToken = MatchToken(SyntaxKind.NumberToken);
